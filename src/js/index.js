@@ -71,7 +71,7 @@ function renderStory (story) {
   }
 
   function renderMeta (story) {
-    return '<div>' + story.nick + ' @ ' + story.date + '</div>'
+    return '<div>' + story.nick + ' @ EI KESRÄ VIINAA ' + story.date + '</div>'
   }
 }
 

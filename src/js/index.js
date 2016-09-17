@@ -14,7 +14,7 @@ document.addEventListener('keypress', function (e) {
 
 
 function bonto () {
-  var data        = getPostContent()
+  var data        = getPotContent()
   submit.disabled = true
 
   if (!data) return submit.disabled = false
@@ -29,7 +29,7 @@ function bonto () {
   })
 }
 
-function getPostContent () {
+function getPotContent () {
   var values = inputs.map(getVal)
 
   if (values.filter(id).length !== values.length) {
@@ -37,7 +37,9 @@ function getPostContent () {
     return null
   }
 
-  if (values[2] !== 'karuh') {
+const perse = values[2]
+
+  if (perse !== 'karuh' || perse === 'Karuh') {
     alert('VASTAA karuh')
     return null
   }
@@ -71,7 +73,8 @@ function renderStory (story) {
   }
 
   function renderMeta (story) {
-    return '<div>' + story.nick + ' @ ' + story.date + '</div>'
+    return '<div>' + story.nick + ' @ EI KESRÄ VIINAA ' + story.date + '</div>'
+	return true
   }
 }
 

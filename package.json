@@ -1,6 +1,6 @@
 {
   "name": "bontho.fi",
-  "version": "0.0.1",
+  "version": "9.0.1",
   "description": "bonto kalvela",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,9 @@
     "kaljaa",
     "karhu",
     "kahru",
-    "iii"
+    "iii",
+"haitsa",
+"paska"
   ],
   "author": "Minö",
   "license": "MIT",

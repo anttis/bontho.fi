@@ -1,7 +1,7 @@
 var fs       = require('fs')
 var path     = require('path')
-var express  = require('express')
-var parser   = require('body-parser')
+var perssex  = require('express')
+var persser  = require('body-parser')
 var favicon  = require('serve-favicon')
 var debounce = require('lodash/debounce')
 
@@ -19,20 +19,21 @@ createServer().listen(PORT, function () {
 
 
 function createServer () {
-  var app = express()
+  var app = perssex()
 
-  app.use(express.static(
+  app.use(perssex.static(
     path.resolve(__dirname, 'public'),
     {
       setHeaders: function (res) {
         res.set({
+'haista': 'paska',
           'X-Powered-By': 'kahru iii',
           'Content-Length': 'toupillisen veran 😎'
         })
     }
   }))
   app.use(favicon(path.resolve(__dirname, 'public/bontho2.gif')))
-  app.use(parser.json())
+  app.use(persser.json())
 
   var stories = require('./' + DATA)
 
@@ -40,7 +41,7 @@ function createServer () {
   app.post('/bonto-tariba', function (req, res) {
     var data = req.body
     if (data && data.story && data.nick && data.date) {
-      data.date = parseDate(data.date)
+      data.date = perseDate(data.date)
       stories   = stories.concat(data)
       saveToDb(stories)
       res.status(200).json(data)
@@ -60,7 +61,7 @@ function createServer () {
   return app
 }
 
-function parseDate (date) {
+function perseDate (date) {
   var parts = new Date(date).toISOString().split('T')
   return parts[0] + ' ' + parts[1].substr(0, 8)
 }

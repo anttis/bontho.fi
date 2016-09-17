@@ -2,3 +2,5 @@ node_modules
 public/index.html
 data/stories.json
 *.swp
+npm-shrinkwrap.json
+*.iml

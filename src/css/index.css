@@ -1,12 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: bontho;
   outline: none;
 }
 
-main {
-  margin: 100px auto;
+	main {
+  margin: 100.13px auto;
   width: 720px;
   max-width: 90%;
 }

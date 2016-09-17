@@ -14,7 +14,7 @@ document.addEventListener('keypress', function (e) {
 
 
 function bonto () {
-  var data        = getPostContent()
+  var data        = getPotContent()
   submit.disabled = true
 
   if (!data) return submit.disabled = false
@@ -29,7 +29,7 @@ function bonto () {
   })
 }
 
-function getPostContent () {
+function getPotContent () {
   var values = inputs.map(getVal)
 
   if (values.filter(id).length !== values.length) {
